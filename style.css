@@ -6,10 +6,59 @@
     extralightgreen #d4e9e2
     darkgreen #1e3932
 */
+:root {
+  --white: #f2f0eb;
+  --black: #27251F;
+  --lightgreen: #00754a;
+  --extralightgreen: #d4e9e2;
+  --darkgreen: #1e3932;
+}
 * {
-  color: #27251F;
+  color: #27251F
   box-sizing: border-box;
   font-family: sans-serif;
+  background-color: #1e3932;
+  /*border: dotted .1em pink;*/
 }
 
-/* your code */
+/*controls main flexbox*/
+body {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  justify-content: space-between; /*why isn't this working?!!? grrrr!*/
+  align-items: stretch;
+  margin: 10% 10%;
+}
+body > * {
+  margin: 1%;
+}
+nav  {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  color: var(--white);
+}
+nav > * {
+  font-size: 250%;
+}
+header,label {
+  background-color: var(--white);
+  padding: 2%;
+  border-radius: 2%;
+}
+.city-list {
+  border: solid .1rem var(--extralightgreen);
+  padding: 2%;
+}
+.city-list > * {
+  margin: 1%;
+  padding: 1% 4%;
+}
+.city-item {
+  display: flex;
+  background-color: var(--lightgreen);
+  justify-content: flex-end;
+}
+
